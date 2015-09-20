@@ -1,4 +1,4 @@
-define([], function(){
+define(["mixins/storage"], function(storage){
 
     var ChatCore = function(){
 
@@ -22,6 +22,14 @@ define([], function(){
         var addMessage = function(text){
             socket.emit('send', { message: text });
         };
+
+        storage.setItem("param", { param: 1 });
+        storage.setItem("param1", 10);
+        var result = storage.getItem("param");
+        var result1 = storage.getItem("param1");
+
+        console.log("result", result);
+        console.log("result1", result1);
 
         return {
           say: addMessage

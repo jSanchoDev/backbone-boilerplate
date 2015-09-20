@@ -1,7 +1,8 @@
 // Kick off the application.
-require(["app", "views/ChatView", "services/ChatCore", "router"], function(app, ChatView, chat, Router) {
+require(["app", "views/ChatView", "services/ChatCore", "router", "mixins/storage"], function(app, ChatView, chat, Router) {
   // Define your master router on the application namespace and trigger all
   // navigation from this instance.
+
   app.router = new Router();
 
   // Trigger the initial route and enable HTML5 History API support, set the

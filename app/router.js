@@ -3,6 +3,9 @@ define(function(require, exports, module) {
 
   // External dependencies.
   var Backbone = require("backbone");
+    var Cocktail = require("cocktail");
+
+
 
   // Defining the application router.
   var Router = Backbone.Router.extend({

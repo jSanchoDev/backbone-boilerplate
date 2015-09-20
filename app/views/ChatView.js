@@ -1,8 +1,10 @@
-define("views/ChatView", ["backbone", "underscore"], function(Backbone, _){
+define("views/ChatView", ["backbone", "underscore", "cocktail", "mixins/storage"], function(Backbone, _, Cocktail, storage){
 
     var ChatView = Backbone.View.extend({
 
         tagName: 'div',
+
+        mixins: ["storage"],
 
         template: _.template($("#appTemplate").html()),
 
@@ -11,10 +13,13 @@ define("views/ChatView", ["backbone", "underscore"], function(Backbone, _){
         },
 
         render: function(){
+            this.setItem("viewParam", {});
             this.$el.html(this.template({}));
             return this;
         }
     });
+
+    Cocktail.mixin(ChatView, window.appMixins.storage);
 
     return ChatView;
 });
