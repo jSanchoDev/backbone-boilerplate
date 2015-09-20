@@ -14,4 +14,8 @@ io.sockets.on('connection', function (socket) {
     socket.on('send', function (data) {
         io.sockets.emit('message', data);
     });
+
+    //setInterval(function(){
+    //    socket.emit('message', { message: 'Heartbeat: ' + new Date().toJSON().slice(0,10) });
+    //}, 1000);
 });
