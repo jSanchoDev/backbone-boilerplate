@@ -13,9 +13,9 @@ define(["mixins/storage"], function(storage){
                 for(var i=0; i<messages.length; i++) {
                     html += messages[i] + '<br />';
                 }
-                console.log("Message received", data.message);
+                //console.log("Message received", data.message);
             } else {
-                console.log("There is a problem:", data);
+                //console.log("There is a problem:", data);
             }
         });
 
