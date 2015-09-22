@@ -9,7 +9,7 @@ define("views/ChatView", ["backbone", "underscore", "cocktail", "mixins/storage"
         template: _.template($("#appTemplate").html()),
 
         initialize: function(){
-            console.log(987654321);
+            console.log(123456789);
         },
 
         render: function(){
